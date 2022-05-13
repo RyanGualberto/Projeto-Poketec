@@ -1,3 +1,5 @@
+const screen = document.querySelector(".screen");
+
 class Person {
     constructor(name, life, mana, heal, def, atk, type){
         this.name = name;
@@ -11,20 +13,20 @@ class Person {
 }
 
 const players = [
-    new Person("Squirtle", 45, 75, 15, 30, 150, "fire"),
-    new Person("Charmander", 80, 100, 20, 15, 100, "psychic"),
-    new Person("Bulbasaur", 80, 100, 20, 15, 100, "")
+    new Person("Squirtle", 45, 75, 15, 30, 150, "fire")
 ]
 
 const bosses = [
-    new Person("Ratata", 90, 45, 20, 30, 55, "normal"),
-    new Person("abobora", 90, 45, 20, 30, 55, "plant"),
     new Person("Ratata", 90, 45, 20, 30, 55, "normal")
-
 ]
 
-function attackBoss(){
-    document.innerHTML = "pocoto";
+function attackBoss(player, boss){
+    boss.life = boss.life - (player.atk - boss.def)
+    if (boss.life <= 0){
+        return "0"
+    }
+    screen.innerHTML = attackBoss(players[0], bosses[0]);
+    return boss.life
 }
 
 // console.log(person1.type)

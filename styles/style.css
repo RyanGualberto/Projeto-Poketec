@@ -1,0 +1,49 @@
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions {
+    display: flex;
+}
+
+.btn {
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 90x;
+    width: 90px;
+    padding: 3%;
+    margin: 1%;
+    background: #00000050;
+    color: white;
+    font-weight: 700;
+    transition: all .2s ease-in;
+}
+
+.btn:hover {
+    background: #00000090;
+}
+
+.btn:active {
+    background: #FFFFFF50;
+    color: black;
+}
+
+.screen {
+    height: 380px;
+    width: 450px;
+    background: #1c1c1c30;
+    border: black solid 1px;
+    margin-bottom: 3%;
+    border-radius: 5px;
+}
